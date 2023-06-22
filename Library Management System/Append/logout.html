@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Social Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-image: url('bg.jpg');
+                display: flex;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-position: center;
+                background-size: cover;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                user-select: none;
+            }
+            .logout
+            {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 40px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                
+                background-color:rgb(233, 193, 144);
+                border-radius: 5px;
+                box-shadow: 1px 1px 20px rgb(182, 200, 200);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 0;
+            }
+            .logout  header{
+                margin-bottom: 25px;
+                margin: 0 0 25px 0;
+            }
+            img{
+                position: relative;
+                width: 80px;
+                top: 50%;
+                border-radius: 50%;
+                box-shadow: 1px 1px 15px rgb(157, 169, 169);
+            }
+            .field
+            {
+                border:none solid rgb(144, 178, 196);
+                border-radius: 10px;
+                background-color: transparent;
+                width: 100%;
+                margin-bottom: 15px;
+                display: flex;
+            }
+            .field span{
+                color: rgb(189, 49, 133);
+                width: 40px;
+                line-height: 45px;
+                text-align: center;
+            }
+            .field input{
+                width: 100%;
+                height: 45px;
+                font-size: 1.1rem;
+                padding: 5px;
+                color: rgb(2, 30, 30);
+                background-color: transparent;
+                border: none;
+            }
+           
+            .submit
+            {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 45px;
+                margin-bottom: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+                color: rgb(15, 13, 13);
+                background-color: transparent;
+                border: none solid rgb(126, 171, 171);
+                border-radius: 125px;
+            }
+            .submit:hover{
+                cursor: pointer;
+                background-color: rgb(132, 0, 255);
+            }
+            .login-form-copy
+            {
+                margin-bottom: 15px;
+            }
+            .login-form_sign-up
+            {
+                text-decoration: none;
+                color: rgb(8, 6, 7);
+            }
+           
+        </style>
+    </head>
+    <body>
+        <form action="" class="logout">
+            <header><img src="https://csba2.benilde.edu.ph/sspr/img/userlogin.jpg"></header>
+            <div class="field"><span class="fa fa-user"></span><input type="text" placeholder="Username" required></div>
+            <div class="field"><span class="fa fa-lock"></span><input type="password" placeholder="Password" required></div>
+          
+            <input type="submit" class="submit" value="LOGOUT" id="logout-btn">
+           
+            </div>
+           
+        </form>
+        <script>
+            document.getElementById("logout-btn").addEventListener("click", function(event) {
+              event.preventDefault(); // Prevent form submission
+              alert("You are successfully logged out");
+              window.location.href = "index.html"; // Replace with the desired URL of the index page
+            });
+          </script>
+        
+    </body>
+</html>
